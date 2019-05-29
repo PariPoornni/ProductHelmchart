@@ -2,7 +2,7 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: mvc-deployment-helm
-  namespace: {{ .Values.namespace }}
+  namespace: foo
 spec:
   selector:
     matchLabels:
@@ -38,7 +38,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mvc-service-helm
-  namespace: {{ .Values.namespace }}
+  namespace: foo
 spec:
   selector:
     app: mvc
