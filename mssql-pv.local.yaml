@@ -1,6 +1,7 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
+  namespace: foo
   name: mssql-persistent-volume
   labels:
     type: local
@@ -15,6 +16,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  namespace: foo
   name: mssql-pv-claim
 spec:
   accessModes:
