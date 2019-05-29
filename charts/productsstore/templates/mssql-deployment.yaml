@@ -2,7 +2,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: mssql-deployment-helm
-  namespace: {{ .Values.namespace }}
+  namespace: foo
 spec:
   replicas: {{ .Values.sql.image.replicaCount }}
   template:
